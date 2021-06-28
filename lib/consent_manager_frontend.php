@@ -62,7 +62,7 @@ class consent_manager_frontend
             foreach ($cookiegroup['cookie_uids'] as $uid) {
                 if (isset($this->cache['cookies'][rex_clang::getCurrentId()][$uid])) {
                     $this->cookies[$uid] = $this->cache['cookies'][rex_clang::getCurrentId()][$uid];
-                    $this->scripts[$uid] = $this->cache['cookies'][rex_clang::getCurrentId()][$uid]['script'];
+                    $this->scripts[$uid] = $this->cache['cookies'][rex_clang::getStartId()][$uid]['script'];
                 }
             }
             $this->scripts = array_filter($this->scripts);
