@@ -80,7 +80,7 @@ if ($this->getVar('debug')) {
                         <div class="consent_manager-sitelinks">
                             <?php
                             foreach ($consent_manager->links as $v) {
-                                echo '<a href="'.rex_getUrl($v).'">'.rex_article::get($v)->getName().'</a>';
+                                echo '<a href="'.rex_getUrl($v).'">'. (!is_null(rex_article::get($v)) ? rex_article::get($v)->getName() : '').'</a>';
                             }
                             ?>
                         </div>
